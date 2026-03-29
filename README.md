@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# 🌐 React App – Miniprojekt 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Detta projekt är utvecklat som en del av kursens **Miniprojekt 1**, där målet är att skapa en React-applikation med TypeScript, routing, komponenter och deployment. Projektet består av flera sidor, komponenter, layout samt navigation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Demo
 
-## React Compiler
+🔗 **Live-demo på Vercel:**  
+https://vercel.com/new/sanhu7s-projects/success?developer-id=&external-id=&redirect-url=&branch=master&deploymentUrl=react-app-fixed-3v2phmdnr-sanhu7s-projects.vercel.app&projectName=react-app-fixed&s=https%3A%2F%2Fgithub.com%2Fsanhu7%2Freact-app-fixed&gitOrgLimit=&hasTrialAvailable=1&totalProjects=1&flow-id=MoxiTgWv0kBY6ZXvlNn2P
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Följ stegen nedan för att köra projektet lokalt:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Klona projektet
+https://github.com/sanhu7/react-app-fixed
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Gå in i mappen
+cd react-app-fixed
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Installera beroenden
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Starta utvecklingsserver
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#Teknologier
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*React 18
+*TypeScript
+*Vite
+*React Router DOM
+*Tailwind CSS 
+*Git & GitHub
+*Vercel (deploy)
+
+---
+
+### Funktionalitet /Sidor
+
+1. Home: Startsidans innehåll
+2. About: Enkel om-sida
+3. Todos: En Todo-lista (med state)
+4. Counter: En räknare (med state)
+4. 404Fångar felaktiga routes
+
+###  Kravlista från uppgiften
+
+- [x] Projektet innehåller minst **6 komponenter**
+- [x] Minst **2 komponenter är stateful**
+- [x] **React Router DOM** används för att uppdatera URL:en dynamiskt
+- [x] Git & GitHub har använts
+- [x] README.md finns i projektet
+- [x] Deploy-länk (Vercel) finns
+- [ ] Uppgiften lämnas in i tid
+- [ ] Muntlig presentation genomförd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
