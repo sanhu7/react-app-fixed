@@ -8,10 +8,16 @@ export default function Counter() {
             <h1>Counter (Räknare)</h1>
             <p>Value: {count}</p>
 
-            <button onClick={() => setCount(count + 1)}>+</button>
-            <button onClick={() => setCount(count - 1)} style={{ marginLeft: "1rem" }}>
+            <button onClick={() => setCount(count - 1)}>
                 -
             </button>
+
+            <button onClick={() => setCount(0)} style={{ margin: "0 1rem" }}>
+                Reset
+            </button>
+
+            <button onClick={() => setCount(count + 1)}>+</button>
+
         </section>
     );
 }
