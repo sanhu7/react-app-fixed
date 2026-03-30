@@ -11,6 +11,7 @@ export default function Header() {
                 justifyContent: "space-between",
                 justifyItems: "center",
 
+
             }}
         >
             <h2>logo</h2>

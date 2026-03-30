@@ -1,10 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 import type { Todo } from "../types/Todo";
 
 export default function TodoList() {
-    const [todos, setTodos] = useState<Todo[]>([]);
+
+    // ⭐ Load saved todos directly in useState (bästa sättet)
+    const [todos, setTodos] = useState<Todo[]>(() => {
+        const saved = localStorage.getItem("todos");
+        return saved ? JSON.parse(saved) : [];
+    });
+
     const [text, setText] = useState("");
+
+
+
+
+    // ⭐ Save to LocalStorage whenever todos change
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
+
 
     function addTodo() {
         if (text.trim() === "") return;
@@ -32,19 +47,25 @@ export default function TodoList() {
     }
 
     return (
-        <section style={{ maxWidth: "400px", margin: "0 auto" }}>
-            <h1>Todo List</h1>
-
-            <div className="flex gap-2">
+        <div>
+            {/* Input + Add button */}
+            <div className="flex gap-2 mb-4">
                 <input
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    placeholder="Add todo..."
+                    className="flex-1 border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="Add a task..."
                 />
-                <button onClick={addTodo}>Add</button>
+                <button
+                    onClick={addTodo}
+                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                >
+                    Add
+                </button>
             </div>
 
-            <ul className="mt-3 flex flex-col gap-2">
+            {/* Todo list */}
+            <ul className="flex flex-col gap-3">
                 {todos.map((todo) => (
                     <TodoItem
                         key={todo.id}
@@ -54,6 +75,6 @@ export default function TodoList() {
                     />
                 ))}
             </ul>
-        </section>
+        </div>
     );
 }
