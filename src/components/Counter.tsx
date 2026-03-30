@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Counter() {
-    const [count, setCount] = useState(0);
+
+    // ladda från LocalStorage
+    const [count, setCount] = useState(() => {
+        const saved = localStorage.getItem("counter");
+        return saved ? Number(saved) : 0;
+    });
+
+    //  spara  auto i LocalStorage vid ändring
+    useEffect(() => {
+        localStorage.setItem("counter", String(count));
+    }, [count]);
+
 
     return (
         <section style={{ textAlign: "center" }}>
