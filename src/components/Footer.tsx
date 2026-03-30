@@ -1,14 +1,14 @@
-import { Link } from "react-router";
-
 export default function Footer() {
     return (
-        <header>
-            <Link to="/" className="text-xl">
-                footer
-            </Link>
-            <nav>
-                <Link to="/homepage">HomePage</Link>
-            </nav>
-        </header>
+        <footer
+            style={{
+                marginTop: "2rem",
+                padding: "1rem",
+                textAlign: "center",
+                background: "#f9c4c4",
+            }}
+        >
+            <p>footer</p>
+        </footer>
     );
 }

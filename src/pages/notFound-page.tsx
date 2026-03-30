@@ -1,9 +1,8 @@
 export default function NotFoundPage() {
     return (
-        <main>
-            <h1 className="text-Bxl ">error </h1>
-
-
-        </main>
+        <div  >
+        </div>
     );
 }
+
+<h1>404 - Not Found</h1>

@@ -1,13 +1,17 @@
-
-import { Link } from "react-router";
+import { useState } from "react";
 
 export default function Counter() {
-    return (
-        <header>
-            <Link to="/" className="text-xl">
-                BRAND
-            </Link>
+    const [count, setCount] = useState(0);
 
-        </header>
+    return (
+        <section style={{ textAlign: "center" }}>
+            <h1>Counter (Räknare)</h1>
+            <p>Value: {count}</p>
+
+            <button onClick={() => setCount(count + 1)}>+</button>
+            <button onClick={() => setCount(count - 1)} style={{ marginLeft: "1rem" }}>
+                -
+            </button>
+        </section>
     );
 }

@@ -1,8 +1,8 @@
 export default function AboutPage() {
     return (
-        <main>
-            <h1 className="text-Bxl ">Home Page</h1>
-
-        </main>
+        <div style={{ textAlign: "center" }}>
+            <h1>About Page</h1>
+            <p>This is a simple React project with routing.</p>
+        </div>
     );
 }
