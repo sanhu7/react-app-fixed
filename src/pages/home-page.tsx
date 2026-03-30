@@ -1,15 +1,14 @@
 export default function HomePage() {
     return (
         <div style={{ textAlign: "center", marginTop: "2rem", padding: "1rem" }}>
-            <h1>Home Page</h1>
+            <h1>Welcome!</h1>
             <p>
-                This is a school project created for the course "Miniprojekt 1".
-                The purpose of this project is to practice component structure,
-                state management and routing using React and TypeScript.
+                This is my React project built with Vite, TypeScript and React Router.
             </p>
             <p>
-                Navigate through the menu to see the different features such as
-                the Todo List, Counter and About page.
+                Feel free to explore the pages using the navigation above.
+                You’ll find a Todo List, a Counter, basic layout components and more.
+                Thanks for visiting! 🌟
             </p>
         </div>
     );
