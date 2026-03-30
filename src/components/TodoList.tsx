@@ -4,7 +4,7 @@ import type { Todo } from "../types/Todo";
 
 export default function TodoList() {
 
-    // ⭐ Load saved todos directly in useState (bästa sättet)
+    //  Load sparade todos direkt i useState 
     const [todos, setTodos] = useState<Todo[]>(() => {
         const saved = localStorage.getItem("todos");
         return saved ? JSON.parse(saved) : [];
@@ -15,7 +15,7 @@ export default function TodoList() {
 
 
 
-    // ⭐ Save to LocalStorage whenever todos change
+    //  spara i LocalStorage även om todos change
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todos));
     }, [todos]);
@@ -46,6 +46,15 @@ export default function TodoList() {
         setTodos(todos.filter((t) => t.id !== id));
     }
 
+
+    function editTodo(id: number, newText: string) {
+        setTodos(
+            todos.map((todo) =>
+                todo.id === id ? { ...todo, text: newText } : todo
+            )
+        );
+    }
+
     return (
         <div>
             {/* Input + Add button */}
@@ -72,6 +81,7 @@ export default function TodoList() {
                         todo={todo}
                         onToggle={toggleTodo}
                         onDelete={deleteTodo}
+                        onEdit={editTodo}
                     />
                 ))}
             </ul>
