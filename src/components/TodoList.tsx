@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
-import type { Todo } from "../types/Todo";
+import type { Todo } from "../Types/Todo";
 
 export default function TodoList() {
 
