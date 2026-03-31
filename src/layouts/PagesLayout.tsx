@@ -9,7 +9,7 @@ export default function PagesLayout() {
 
             <Header />
 
-            <main className="flex-1 p-8">
+            <main className="flex-1 bg-pink-100 p-8">
                 <Outlet />
             </main>
 
