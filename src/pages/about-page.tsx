@@ -6,7 +6,7 @@ export default function AboutPage() {
             <Card title="About This Project">
                 <div className="text-left text-gray-700 leading-relaxed text-2xl">
                     <p>
-                        This project was created as part of the course assignment <strong>Miniprojekt 1</strong>.
+                        This project was created as part of the course assignment <strong>Mini-project 1</strong>.
                         It demonstrates the use of React, TypeScript, React Router DOM, Tailwind CSS and component-based development.
                     </p>
 
