@@ -21,7 +21,7 @@ export default function AboutPage() {
 
             <Card title="About the Developer" className="w-full max-w-2xl">
                 <p className="text-slate-500 text-sm">
-                    👤 <strong className="text-slate-700">Sana</strong> — Web development student, Mini-project 1.
+                    👤 <strong className="text-slate-700">Sana</strong> — Front End development student, Mini-project 1.
                 </p>
             </Card>
 
