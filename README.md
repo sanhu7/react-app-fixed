@@ -1,86 +1,73 @@
-# 🌐 React App – Miniprojekt 1
+# MiniReactApp ✨
 
-Detta projekt är utvecklat som en del av kursens **Miniprojekt 1**, där målet är att skapa en React-applikation med TypeScript, routing, komponenter och deployment. Projektet består av flera sidor, komponenter, layout samt navigation.
+En webb-applikation byggd med React och TypeScript som en del av Miniprojekt 1.
 
----
+## Beskrivning
 
-##  Demo
+MiniReactApp är en enkel multi-sida applikation som innehåller en startsida, en om-sida, en todo-lista och en räknare. Applikationen är byggd med React, TypeScript och Tailwind CSS, med React Router för navigering.
 
-🔗 **Live-demo på Vercel:**  
-https://vercel.com/new/sanhu7s-projects/success?developer-id=&external-id=&redirect-url=&branch=master&deploymentUrl=react-app-fixed-3v2phmdnr-sanhu7s-projects.vercel.app&projectName=react-app-fixed&s=https%3A%2F%2Fgithub.com%2Fsanhu7%2Freact-app-fixed&gitOrgLimit=&hasTrialAvailable=1&totalProjects=1&flow-id=MoxiTgWv0kBY6ZXvlNn2P
+## Tekniker
 
----
+- React
+- TypeScript
+- Tailwind CSS
+- React Router DOM
+- Vite
 
-##  Installation
+## Kom igång
 
-Följ stegen nedan för att köra projektet lokalt:
+### Installation
 
 ```bash
-# Klona projektet
-https://github.com/sanhu7/react-app-fixed
-
-# Gå in i mappen
-cd react-app-fixed
-
-# Installera beroenden
+git clone https://github.com/sanhu7/react-app-fixed.git
+cd mini-react-app
 npm install
+```
 
-# Starta utvecklingsserver
+### Kör projektet
+
+```bash
 npm run dev
+```
 
-#Teknologier
+### Bygg projektet
 
-*React 18
-*TypeScript
-*Vite
-*React Router DOM
-*Tailwind CSS 
-*Git & GitHub
-*Vercel (deploy)
+```bash
+npm run build
+```
 
----
+## Demo
 
-### Funktionalitet /Sidor
+🔗 [Live demo](https://DIN-LÄNK.netlify.app)
 
-1. Home: Startsidans innehåll
-2. About: Enkel om-sida
-3. Todos: En Todo-lista (med state)
-4. Counter: En räknare (med state)
-4. 404Fångar felaktiga routes
+## Komponenter
 
-###  Kravlista från uppgiften
+ -Komponent  Beskrivning 
 
-- [x] Projektet innehåller minst **6 komponenter**
-- [x] Minst **2 komponenter är stateful**
-- [x] **React Router DOM** används för att uppdatera URL:en dynamiskt
+1.`Header` | Stateless | Navigeringsbar med responsiv hamburgermeny |
+2.`Footer` | Stateless | Sidfot med copyright |
+3.`PagesLayout` | Stateless | Layout-wrapper med Header och Footer |
+4.`Card` | Stateless | Återanvändbar kortkomponent |
+5.`Counter` | **Stateful** | Räknare med öka, minska och återställ |
+6.`TodoList` | **Stateful** | Todo-lista med lägg till, redigera och ta bort |
+
+## Sidor
+
+- `/` — Startsida
+- `/about` — Om sidan
+- `/todos` — Todo-lista
+- `/counter` — Räknare
+
+## Krav
+
+### Godkänt
+- [x] Projektet innehåller minst 6 komponenter varav minst 2 är statefulla
+- [x] React Router används för dynamisk URL-uppdatering
 - [x] Git & GitHub har använts
-- [x] README.md finns i projektet
-- [x] Deploy-länk (Vercel) finns
+- [x] README.md finns i projektmappen
 - [ ] Uppgiften lämnas in i tid
-- [ ] Muntlig presentation genomförd
+- [ ] Muntlig presentation är genomförd
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Väl godkänt
+- [ ] CSS i JS-lib används
+- [ ] Data från ett web-API hämtas och visas
