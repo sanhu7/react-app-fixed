@@ -20,7 +20,7 @@ export default function HomePage() {
             </Card>
 
 
-            <Card title="Explore the App" className="w-full max-w-2xl">
+            <Card title="Explore the App" className="w-full max-w-xl">
                 <div className="flex flex-col gap-3">
 
                     <NavLink to="/about"

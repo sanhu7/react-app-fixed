@@ -39,7 +39,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: Props) {
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && handleSave()}
-                        className="flex-1 border border-blue-300 rounded-lg px-3 py-1 text-sm outline-none"
+                        className="flex-1 border border-pink-500 rounded-lg px-3 py-1 text-sm outline-none"
                     />
                 ) : (
                     <span className={`text-sm flex-1 ${todo.completed

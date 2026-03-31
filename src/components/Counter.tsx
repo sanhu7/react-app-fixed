@@ -15,7 +15,7 @@ export default function Counter() {
     return (
         <section className="flex items-center justify-center py-16">
 
-            <div className="bg-white rounded-2xl shadow-lg p-8 w-80 flex flex-col items-center gap-6">
+            <div className="bg-white rounded-xl shadow-lg p-8 w-80 flex flex-col items-center gap-6">
 
                 <div className="flex items-center justify-center gap-2">
                     <FaBolt className="text-orange-400 text-xl" />
@@ -24,7 +24,7 @@ export default function Counter() {
 
                 <div className="w-full h-px bg-slate-100" />
 
-                <div className={`text-7xl font-bold transition-colors duration-300 ${count > 0 ? "text-green-500" :
+                <div className={`text-5xl font-bold transition-colors duration-300 ${count > 0 ? "text-green-500" :
                     count < 0 ? " text-red-500" :
                         "text-slate-300"
                     }`}>
@@ -39,7 +39,7 @@ export default function Counter() {
 
                     <button
                         onClick={() => setCount(count - 1)}
-                        className="w-14 h-14 text-2xl font-bold bg-red-100 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-200"
+                        className="w-14 h-14 text-xl font-bold bg-red-100 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-200"
                     >
                         −
                     </button>

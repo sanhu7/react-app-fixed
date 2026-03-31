@@ -4,7 +4,7 @@ export default function AboutPage() {
     return (
         <div className="flex flex-col items-center gap-6 py-10 px-4">
 
-            <Card title="About This Project" className="w-full max-w-2xl">
+            <Card title="About This Project" className="w-full max-w-xl">
                 <div className="text-slate-500 text-sm leading-relaxed flex flex-col gap-3">
                     <p>
                         This project was created as part of <strong className="text-slate-700">Mini-project 1</strong>.
@@ -19,7 +19,7 @@ export default function AboutPage() {
                 </div>
             </Card>
 
-            <Card title="About the Developer" className="w-full max-w-2xl">
+            <Card title="About the Developer" className="w-full max-w-xl">
                 <p className="text-slate-500 text-sm">
                     👤 <strong className="text-slate-700">Sana</strong> — Front End development student, Mini-project 1.
                 </p>
