@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+
+
 export default function Counter() {
 
     // ladda från LocalStorage
@@ -16,7 +18,7 @@ export default function Counter() {
 
     return (
         <section style={{ textAlign: "center" }}>
-            <h1>Counter (Räknare)</h1>
+            <h1>Counter (Räknare) </h1>
             <p>Value: {count}</p>
 
             <button onClick={() => setCount(count - 1)}>

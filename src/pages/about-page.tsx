@@ -4,7 +4,7 @@ export default function AboutPage() {
     return (
         <div className="flex justify-center mt-10 px-4">
             <Card title="About This Project">
-                <div className="text-left text-gray-700 leading-relaxed text-2xl">
+                <div className="text-left text-gray-700 leading-relaxed ">
                     <p>
                         This project was created as part of the course assignment <strong>Mini-project 1</strong>.
                         It demonstrates the use of React, TypeScript, React Router DOM, Tailwind CSS and component-based development.
