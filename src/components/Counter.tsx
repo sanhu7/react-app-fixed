@@ -44,7 +44,6 @@ export default function Counter() {
                         −
                     </button>
 
-                    {/* Reset — grå */}
                     <button
                         onClick={() => setCount(0)}
                         className="flex-1 py-2 text-sm font-semibold uppercase tracking-wider bg-slate-100 text-slate-500 rounded-full hover:bg-slate-500 hover:text-white transition-all duration-200"
@@ -52,7 +51,6 @@ export default function Counter() {
                         Reset
                     </button>
 
-                    {/* Plus — grön */}
                     <button
                         onClick={() => setCount(count + 1)}
                         className="w-14 h-14 text-2xl font-bold bg-green-100 text-green-500 rounded-full hover:bg-green-500 hover:text-white transition-all duration-200"
