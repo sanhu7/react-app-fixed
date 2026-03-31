@@ -57,7 +57,6 @@ export default function TodoList() {
 
     return (
         <div>
-            {/* Input + Add button */}
             <div className="flex gap-2 mb-4">
                 <input
                     value={text}
@@ -73,7 +72,6 @@ export default function TodoList() {
                 </button>
             </div>
 
-            {/* Todo list */}
             <ul className="flex flex-col gap-3">
                 {todos.map((todo) => (
                     <TodoItem
