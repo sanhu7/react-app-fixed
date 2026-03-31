@@ -10,13 +10,12 @@ export default function Header() {
 
             <div className="flex items-center justify-between px-4 py-3">
 
-                {/* Logo */}
-                <div className="flex items-center gap-2">
+                <NavLink to="/" className="flex items-center gap-2">
                     <HiSparkles className="text-xl text-amber-300" />
                     <h2 className="text-base font-bold text-white">MiniReactApp</h2>
-                </div>
+                </NavLink>
 
-                {/* Desktop nav — döljs på mobil */}
+
                 <nav className="hidden md:flex gap-4 text-white text-sm font-medium uppercase">
                     <NavLink to="/" className="hover:bg-pink-500 px-3 py-1 rounded-md">Home</NavLink>
                     <NavLink to="/about" className="hover:bg-pink-500 px-3 py-1 rounded-md">About</NavLink>
@@ -24,7 +23,7 @@ export default function Header() {
                     <NavLink to="/counter" className="hover:bg-pink-500 px-3 py-1 rounded-md">Counter</NavLink>
                 </nav>
 
-                {/* Hamburger — visas bara på mobil */}
+
                 <button onClick={() => setOpen(!open)} className="md:hidden text-white text-2xl">
                     {open ? "✕" : "☰"}
                 </button>
