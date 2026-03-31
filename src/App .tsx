@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import PagesLayout from "./layouts/PagesLayout";
 
 import HomePage from "./pages/home-page";
@@ -13,9 +11,9 @@ import NotFoundPage from "./pages/notFound-page";
 function App() {
   return (
     <Router>
-      <Header />
 
       <Routes>
+
         <Route element={<PagesLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -24,9 +22,9 @@ function App() {
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />
+
       </Routes>
 
-      <Footer />
     </Router>
   );
 }

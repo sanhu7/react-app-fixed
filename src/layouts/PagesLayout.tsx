@@ -1,13 +1,18 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
 export default function PagesLayout() {
 
     return (
-        <div style={{ padding: "1rem" }}>
+        <div className="min-h-screen flex flex-col">
 
-            <Outlet />
+            <Header />
+            <main className="flex-1 p-8">
+                <Outlet />
+            </main>
+            <Footer />
 
         </div>
     );
-
 }
