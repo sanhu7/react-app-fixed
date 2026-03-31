@@ -30,7 +30,6 @@ export default function Header() {
 
             </div>
 
-            {/* Mobil dropdown — visas bara när open=true */}
             {open && (
                 <nav className="md:hidden bg-pink-800 flex flex-col px-4 py-2 gap-1 text-white text-sm font-medium uppercase">
                     <NavLink to="/" onClick={() => setOpen(false)} className="hover:bg-pink-600 px-3 py-2 rounded-md">Home</NavLink>

@@ -38,18 +38,18 @@ npm run build
 
 ## Demo
 
-🔗 [Live demo](https://DIN-LÄNK.netlify.app)
+🔗 [Live demo] https://react-app-fixed.vercel.app/
 
 ## Komponenter
 
- -Komponent  Beskrivning 
+ -Komponent / Beskrivning 
 
-1.`Header` | Stateless | Navigeringsbar med responsiv hamburgermeny |
-2.`Footer` | Stateless | Sidfot med copyright |
-3.`PagesLayout` | Stateless | Layout-wrapper med Header och Footer |
-4.`Card` | Stateless | Återanvändbar kortkomponent |
-5.`Counter` | **Stateful** | Räknare med öka, minska och återställ |
-6.`TodoList` | **Stateful** | Todo-lista med lägg till, redigera och ta bort |
+1.`Header` (Stateless): Navigeringsbar med responsiv hamburgermeny |
+2.`Footer` (Stateless): Sidfot med copyright |
+3.`PagesLayout` (Stateless): Layout-wrapper med Header och Footer |
+4.`Card` (Stateless): Återanvändbar kortkomponent |
+5.`Counter` (*Stateful*): Räknare med öka, minska och återställ |
+6.`TodoList` (*Stateful*): Todo-lista med lägg till, redigera och ta bort |
 
 ## Sidor
 
