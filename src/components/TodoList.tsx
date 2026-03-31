@@ -15,7 +15,7 @@ export default function TodoList() {
 
 
 
-    //  spara i LocalStorage även om todos change
+    //  spara i LocalStorage 
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todos));
     }, [todos]);

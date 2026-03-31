@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Todo } from "../types/Todo";
+import { FaPencilAlt, FaTimes, FaCheck } from "react-icons/fa";
 
 interface Props {
     todo: Todo;
@@ -20,66 +21,66 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: Props) {
     }
 
     return (
-        <li className="flex items-center justify-between bg-gray-100 p-3 rounded-lg shadow-sm border border-gray-200">
+        <li className="flex items-center justify-between bg-slate-50 px-4 py-3 rounded-xl gap-3">
 
-            {/* LEFT PART: checkbox + text or input */}
-            <div className="flex items-center gap-3">
+
+            <div className="flex items-center gap-3 flex-1">
 
                 <input
                     type="checkbox"
                     checked={todo.completed}
                     onChange={() => onToggle(todo.id)}
-                    className="h-4 w-4"
+                    className="w-4 h-4 accent-teal-600 cursor-pointer shrink-0"
                 />
 
-                {/* EDIT MODE */}
                 {isEditing ? (
                     <input
-                        className="border px-2 py-1 rounded"
+                        autoFocus
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && handleSave()}
+                        className="flex-1 border border-blue-300 rounded-lg px-3 py-1 text-sm outline-none"
                     />
                 ) : (
-                    <span
-                        className={`${todo.completed ? "line-through text-gray-500" : "text-gray-800"}`}
-                    >
+                    <span className={`text-sm flex-1 ${todo.completed
+                        ? "line-through text-slate-300"
+                        : "text-slate-700"
+                        }`}>
                         {todo.text}
                     </span>
                 )}
             </div>
 
-            {/* RIGHT PART: action buttons */}
-            <div className="flex gap-2">
+            <div className="flex gap-2 shrink-0">
 
                 {isEditing ? (
                     <>
                         <button
                             onClick={handleSave}
-                            className="text-green-600 hover:text-green-800"
+                            className="text-teal-500 hover:text-teal-700 transition-colors"
                         >
-                            ✔️
+                            <FaCheck />
                         </button>
                         <button
                             onClick={() => setIsEditing(false)}
-                            className="text-gray-600 hover:text-gray-800"
+                            className="text-slate-400 hover:text-slate-600 transition-colors"
                         >
-                            ✖️
+                            <FaTimes />
                         </button>
                     </>
                 ) : (
                     <>
                         <button
                             onClick={() => setIsEditing(true)}
-                            className="text-blue-600 hover:text-blue-800"
+                            className="text-orange-400 hover:text-orange-600 transition-colors"
                         >
-                            ✏️
+                            <FaPencilAlt />
                         </button>
-
                         <button
                             onClick={() => onDelete(todo.id)}
-                            className="text-red-500 hover:text-red-700"
+                            className="text-red-400 hover:text-red-600 transition-colors"
                         >
-                            ❌
+                            <FaTimes />
                         </button>
                     </>
                 )}
