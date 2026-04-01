@@ -12,14 +12,10 @@ export default function TodoList() {
 
     const [text, setText] = useState("");
 
-
-
-
     //  spara i LocalStorage 
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todos));
     }, [todos]);
-
 
     function addTodo() {
         if (text.trim() === "") return;
