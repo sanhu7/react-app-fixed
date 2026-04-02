@@ -65,8 +65,8 @@ npm run build
 - [x] React Router används för dynamisk URL-uppdatering
 - [x] Git & GitHub har använts
 - [x] README.md finns i projektmappen
-- [ ] Uppgiften lämnas in i tid
-- [ ] Muntlig presentation är genomförd
+- [x] Uppgiften lämnas in i tid
+- [x] Muntlig presentation är genomförd
 
 ### Väl godkänt
 - [ ] CSS i JS-lib används
